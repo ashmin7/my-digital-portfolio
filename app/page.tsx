@@ -410,6 +410,39 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* Social / Connect Section */}
+      <section className="w-full border-t bg-muted/40 py-10">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Connect with me</h2>
+              <p className="max-w-[600px] text-muted-foreground text-sm md:text-base mx-auto">
+                If you&apos;d like to talk about internships, projects, or cyber security in general, feel free to
+                connect with me on social media.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+              <Link
+                href="https://www.linkedin.com/in/ashmin-aryal-b42bab2a9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background px-4 py-2 text-sm font-medium text-primary shadow-sm hover:bg-primary/5 hover:border-primary/70 transition-colors"
+              >
+                <span>LinkedIn</span>
+              </Link>
+              <Link
+                href="https://www.facebook.com/ashmin.aryal11/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm hover:bg-primary/5 hover:text-primary transition-colors"
+              >
+                <span>Facebook</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

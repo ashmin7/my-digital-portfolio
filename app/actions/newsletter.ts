@@ -44,6 +44,26 @@ async function notifyOwnerOfNewSubscriber(email: string, name?: string | null) {
   }
 }
 
+async function sendWelcomeEmailToSubscriber(email: string, name?: string | null) {
+  if (!resend) {
+    console.warn("RESEND_API_KEY is not set; skipping welcome email to subscriber.")
+    return
+  }
+
+  const fromAddress = process.env.EMAIL_FROM || "Ashmin Cyber Lab <onboarding@resend.dev>"
+
+  try {
+    await resend.emails.send({
+      from: fromAddress,
+      to: [email],
+      subject: "Thanks for subscribing to Ashmin Cyber Lab",
+      text: `Hi ${name || "there"},\n\nThank you for subscribing to Ashmin Cyber Lab. I really appreciate your interest in my cyber security journey.\n\nI use this newsletter to share what I'm learning about security, labs I'm working on, and new posts I add to the site.\n\n– Ashmin`,
+    })
+  } catch (error) {
+    console.error("Failed to send welcome email to subscriber:", error)
+  }
+}
+
 /**
  * Server action to subscribe a user to the newsletter
  * For use with useActionState in React 19
@@ -87,6 +107,9 @@ export async function subscribeToNewsletter(
 
     // Notify you (Ashmin) by email about the new subscriber
     await notifyOwnerOfNewSubscriber(email, name || null)
+
+    // Send a thank-you email directly to the subscriber
+    await sendWelcomeEmailToSubscriber(email, name || null)
 
     revalidatePath("/")
 
