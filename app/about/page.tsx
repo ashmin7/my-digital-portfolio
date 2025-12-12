@@ -12,7 +12,8 @@ export default function AboutPage() {
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">About Me</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
-                Cyber security specialist focused on securing AI agents, MCP servers, and modern web applications.
+                Second-year Bachelor of Cyber Security student, early in my journey and focused on understanding how
+                threats work, how attacks happen, and how to protect systems against them.
               </p>
             </div>
           </div>
@@ -30,24 +31,26 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ashmin Aryal</h2>
                 <p className="text-xl text-muted-foreground">
-                  <span className="text-primary font-semibold">Cyber Security Specialist</span>
+                  <span className="text-primary font-semibold">Cyber Security Student & Aspiring Analyst</span>
                 </p>
               </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground">
-                  I am an emerging cyber security specialist, currently focused on securing AI agents, MCP servers, and
-                  modern web applications. Through hands-on projects like this digital portfolio, I am learning how to
-                  design, build, and harden real-world systems end-to-end.
+                  I am currently in the second year of my Bachelor of Cyber Security program and still very early in my
+                  journey. I really enjoy learning how threats function, how attacks take place, and the different ways
+                  you can protect systems against them. Each new lab, assignment, and project makes me more motivated to
+                  move toward a career as a Cyber Security Analyst.
                 </p>
                 <p className="text-muted-foreground">
-                  Guided by programs such as the AI Protector Workshop and Cyber Security Bootcamp content, I am
-                  developing skills in secure development workflows, threat-aware design, and practical security
-                  testing. My goal is to combine solid engineering fundamentals with a security-first mindset.
+                  Through university work and self-practice, I&apos;ve started getting hands-on with SIEM tools,
+                  firewalls, IDS/IPS, and basic scripting and network analysis. These exercises are helping me connect
+                  what I learn in class to how security events actually look in logs, traffic, and real environments.
                 </p>
                 <p className="text-muted-foreground">
-                  This portfolio showcases my journey: configuring secure databases with Neon, building a Next.js
-                  application with Drizzle ORM, publishing security-focused blog content, and gradually layering in AI
-                  and MCP security practices.
+                  This digital portfolio is where I bring everything together: building a secure Next.js application
+                  with Neon and Drizzle ORM, experimenting with AI and MCP security concepts, and writing about what I
+                  learn. I&apos;m actively looking for internship or entry-level opportunities where I can keep learning
+                  from experienced professionals while gaining more practical experience.
                 </p>
               </div>
             </div>
@@ -105,12 +108,12 @@ export default function AboutPage() {
                   <Award className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Cyber Security Bootcamp Content</CardTitle>
-                <CardDescription>Threats, penetration testing & incident readiness</CardDescription>
+                <CardDescription>Security foundations, threats & incident readiness</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  LMS-backed curriculum covering penetration testing concepts, threat detection, and security
-                  operations fundamentals.
+                  LMS-backed curriculum covering core security concepts, threat detection, and security operations
+                  fundamentals.
                 </p>
               </CardContent>
             </Card>
@@ -250,10 +253,10 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Career</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Professional Experience</h2>
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Journey</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Experience So Far</h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                My journey through the cybersecurity industry.
+                How I&apos;m currently building my cyber security skills through study, labs, and personal projects.
               </p>
             </div>
           </div>
@@ -265,17 +268,17 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Principal Security Consultant</h3>
+                  <h3 className="font-bold text-lg">Bachelor of Cyber Security (Year 1–2)</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
-                    2018 - Present
+                    Current
                   </time>
                 </div>
-                <p className="text-muted-foreground mb-2">CyberShield Consulting</p>
+                <p className="text-muted-foreground mb-2">University Studies</p>
                 <p className="text-sm text-muted-foreground">
-                  Leading complex security assessments and penetration tests for Fortune 500 clients. Developing custom
-                  security frameworks and methodologies. Mentoring junior security consultants and delivering executive
-                  briefings on critical security findings.
+                  Building core knowledge in networks, operating systems, security fundamentals, and how different
+                  types of attacks and defenses work, while completing labs and projects that mirror real-world
+                  scenarios.
                 </p>
               </div>
             </div>
@@ -286,17 +289,16 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Senior Security Engineer</h3>
+                  <h3 className="font-bold text-lg">Labs, Assignments & Security Tools</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
-                    2014 - 2018
+                    Ongoing
                   </time>
                 </div>
-                <p className="text-muted-foreground mb-2">SecureTech Solutions</p>
+                <p className="text-muted-foreground mb-2">Practical Exercises</p>
                 <p className="text-sm text-muted-foreground">
-                  Designed and implemented security architectures for cloud migrations. Led vulnerability management
-                  program and security operations center (SOC) initiatives. Conducted internal security assessments and
-                  developed remediation strategies.
+                  Gaining experience with SIEM tools, firewalls, IDS/IPS, and basic scripting and network analysis to
+                  understand how attacks and anomalies appear in real data and logs.
                 </p>
               </div>
             </div>
@@ -307,17 +309,16 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Security Analyst</h3>
+                  <h3 className="font-bold text-lg">Self-Study & Personal Projects</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
-                    2010 - 2014
+                    Ongoing
                   </time>
                 </div>
-                <p className="text-muted-foreground mb-2">Global Financial Services</p>
+                <p className="text-muted-foreground mb-2">Portfolio & AI Security</p>
                 <p className="text-sm text-muted-foreground">
-                  Performed security monitoring and incident response for a major financial institution. Conducted
-                  vulnerability assessments and security awareness training. Assisted in developing security policies
-                  and procedures.
+                  Using this digital portfolio, AI Protector–inspired content, and security-focused blogging to
+                  practice secure web development, database design, and early AI/MCP security concepts.
                 </p>
               </div>
             </div>
