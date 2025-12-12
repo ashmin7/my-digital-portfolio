@@ -289,6 +289,27 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
+                  <h3 className="font-bold text-lg">Cyber Security Specialist Intern – Ausbiz Consulting</h3>
+                  <time className="font-semibold text-primary flex items-center">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    2025
+                  </time>
+                </div>
+                <p className="text-muted-foreground mb-2">Industry Experience</p>
+                <p className="text-sm text-muted-foreground">
+                  Supporting security tasks at Ausbiz Consulting as a cyber security specialist intern—shadowing
+                  senior analysts, helping review alerts and logs, and applying what I learn at university to
+                  real client environments in a supervised way.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 bg-background shadow-sm z-10 md:group-odd:ml-8 md:group-even:mr-8">
+                <Briefcase className="h-5 w-5 text-primary" />
+              </div>
+              <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
+                <div className="flex items-center justify-between space-x-2 mb-1">
                   <h3 className="font-bold text-lg">Labs, Assignments & Security Tools</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />

@@ -4,6 +4,7 @@ import { db, subscribers } from "@/lib/db"
 import { eq } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 import { ActionState, newsletterSubscriptionSchema } from "@/lib/types"
+import { Resend } from "resend"
 
 // Define the interface but don't export it directly
 interface NewsletterState extends ActionState {
@@ -17,6 +18,30 @@ export async function getInitialNewsletterState(): Promise<NewsletterState> {
     status: "idle",
     message: "",
   };
+}
+
+const resendApiKey = process.env.RESEND_API_KEY
+const resend = resendApiKey ? new Resend(resendApiKey) : null
+
+async function notifyOwnerOfNewSubscriber(email: string, name?: string | null) {
+  if (!resend) {
+    console.warn("RESEND_API_KEY is not set; skipping notification email for new subscriber.")
+    return
+  }
+
+  const toAddress = process.env.EMAIL_TO || "ashminaryal111@gmail.com"
+  const fromAddress = process.env.EMAIL_FROM || "Ashmin from Portfolio <onboarding@resend.dev>"
+
+  try {
+    await resend.emails.send({
+      from: fromAddress,
+      to: [toAddress],
+      subject: "New newsletter subscriber on your portfolio",
+      text: `You have a new newsletter subscriber on your portfolio.\n\nName: ${name || "(not provided)"}\nEmail: ${email}`,
+    })
+  } catch (error) {
+    console.error("Failed to send notification email for new subscriber:", error)
+  }
 }
 
 /**
@@ -59,6 +84,9 @@ export async function subscribeToNewsletter(
       email,
       name: name || null,
     })
+
+    // Notify you (Ashmin) by email about the new subscriber
+    await notifyOwnerOfNewSubscriber(email, name || null)
 
     revalidatePath("/")
 

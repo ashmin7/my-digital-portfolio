@@ -4,11 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Image from "next/image";
 import { BlogPost } from "@/lib/types"; // Import BlogPost type from lib/types
 import { formatDate } from "@/lib/utils"; // Assuming formatDate is in utils
+import { seedSampleBlogPosts } from "@/lib/blog-seed";
 
 // Revalidate every 60 seconds
 export const revalidate = 60;
 
 export default async function BlogPage() {
+  // Ensure a few sample posts exist or are updated with full article content
+  await seedSampleBlogPosts();
+
   // Use the imported BlogPost type
   const posts: BlogPost[] = await db.select().from(blogPosts).orderBy(blogPosts.createdAt);
 

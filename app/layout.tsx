@@ -18,9 +18,9 @@ import { AuthSync } from "@/components/auth-sync";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CyberShield | Cybersecurity Portfolio",
-  description: "Professional portfolio showcasing expertise in cybersecurity",
-    generator: 'v0.dev'
+  title: "Ashmin Cyber Lab | Cybersecurity Portfolio",
+  description: "A growing cyber security portfolio by Ashmin Aryal, focused on hands-on learning and modern security practices.",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({

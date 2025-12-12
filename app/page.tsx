@@ -29,72 +29,107 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black relative overflow-hidden">
-        <div className="container px-4 md:px-6 relative z-10">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">
-                  Growing as a Cyber Security Analyst
+      {/* Hero Section - redesigned */}
+      <section className="relative overflow-hidden border-b bg-gradient-to-b from-black via-slate-950 to-background">
+        <div className="absolute inset-0 bg-grid-white/5 bg-[size:64px_64px] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/20 via-transparent to-transparent" />
+
+        <div className="container relative z-10 px-4 py-12 md:py-20 lg:py-24">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary shadow-sm">
+                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
+                Cyber Security Student Portfolio
+              </div>
+              <div className="space-y-3">
+                <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-sky-400 to-indigo-400">
+                  Ashmin Cyber Lab
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  I&apos;m in my second year of a Bachelor of Cyber Security, actively building my skills and confidence
-                  in understanding how threats work, how attacks take place, and the different ways you can protect
-                  systems against them. This digital portfolio documents my hands-on journey toward becoming a Cyber
-                  Security Analyst.
+                <p className="max-w-xl text-balance text-muted-foreground md:text-lg">
+                  I&apos;m a second-year Bachelor of Cyber Security student, learning how real attacks work and how to
+                  defend modern systems. This site is where I turn my labs, notes, and experiments into a living
+                  security portfolio.
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                {/* <Link href="/contact">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Get Started
-                  </Button>
-                </Link> */}
+              <div className="flex flex-wrap items-center gap-3">
                 <Link href="/projects">
-                  <Button size="lg" variant="outline">
-                    Learn More
+                  <Button size="lg" className="shadow-lg shadow-primary/30">
+                    View Practice Projects
+                  </Button>
+                </Link>
+                <Link href="/blog">
+                  <Button size="lg" variant="outline" className="border-primary/40 text-primary">
+                    Read My Articles
                   </Button>
                 </Link>
               </div>
+              <div className="flex flex-wrap gap-4 pt-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-primary" />
+                  <span>Focus: blue-team skills & security fundamentals</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Server className="h-4 w-4 text-primary" />
+                  <span>Stack: Next.js, Neon, Drizzle, Clerk</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-[500px] aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl shadow-2xl">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2 col-span-2">
-                      <div className="h-2 w-[80%] bg-primary/20 rounded-full"></div>
-                      <div className="h-2 w-[60%] bg-primary/20 rounded-full"></div>
+
+            <div className="relative">
+              <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-tr from-primary/20 via-sky-500/10 to-indigo-500/20 blur-3xl" />
+              <div className="relative rounded-2xl border border-white/10 bg-black/60 p-6 shadow-2xl backdrop-blur-xl">
+                <div className="grid gap-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      Snapshot
+                    </span>
+                    <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400">
+                      Learning in progress
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3 text-xs">
+                    <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
+                      <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
+                        <Lock className="h-3.5 w-3.5" />
+                        Lab Practice
+                      </div>
+                      <p className="mt-1 text-[11px] text-muted-foreground">
+                        SIEM, firewalls, IDS/IPS and log analysis exercises.
+                      </p>
                     </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Lock className="h-8 w-8 text-primary" />
+                    <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
+                      <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
+                        <Database className="h-3.5 w-3.5" />
+                        Secure Stack
+                      </div>
+                      <p className="mt-1 text-[11px] text-muted-foreground">
+                        Next.js + Neon + Drizzle with secure defaults.
+                      </p>
                     </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Shield className="h-8 w-8 text-primary" />
+                    <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
+                      <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
+                        <AlertTriangle className="h-3.5 w-3.5" />
+                        Threats
+                      </div>
+                      <p className="mt-1 text-[11px] text-muted-foreground">
+                        Learning how common attacks appear in traffic & logs.
+                      </p>
                     </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Server className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Database className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="space-y-2 col-span-2 mt-2">
-                      <div className="h-2 w-[70%] bg-primary/20 rounded-full"></div>
-                      <div className="h-2 w-[50%] bg-primary/20 rounded-full"></div>
+                    <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
+                      <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
+                        <FileCode className="h-3.5 w-3.5" />
+                        Portfolio
+                      </div>
+                      <p className="mt-1 text-[11px] text-muted-foreground">
+                        Turning coursework into real projects and write‑ups.
+                      </p>
                     </div>
                   </div>
-                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-grid-white/5 bg-[size:50px_50px] opacity-10"></div>
-        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black to-transparent"></div>
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent"></div>
       </section>
 
       {/* Database Error Alert */}

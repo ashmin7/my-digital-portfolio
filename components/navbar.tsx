@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Shield, X } from "lucide-react";
+import { Menu, Shield, X, LogIn, UserPlus } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { usePathname } from "next/navigation";
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
@@ -34,9 +34,10 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 font-semibold">
             <Shield className="h-6 w-6 text-primary" />
-            <span className="">CyberApp</span>
+            <span className="">Ashmin Cyber Lab</span>
           </Link>
-        </div>        {/* Desktop Navigation */}
+        </div>
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-5 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
@@ -90,12 +91,18 @@ export default function Navbar() {
               <div className="mt-auto pt-6">
                 <SignedOut>
                   <div className="flex flex-col gap-2">
-                    <SignInButton mode="modal">
-                      <Button variant="outline" className="w-full">Sign In</Button>
-                    </SignInButton>
-                    <SignUpButton mode="modal">
-                      <Button className="w-full">Sign Up</Button>
-                    </SignUpButton>
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/sign-in">
+                        <LogIn className="mr-2 h-4 w-4" />
+                        Sign In
+                      </Link>
+                    </Button>
+                    <Button asChild className="w-full">
+                      <Link href="/sign-up">
+                        <UserPlus className="mr-2 h-4 w-4" />
+                        Get Started
+                      </Link>
+                    </Button>
                   </div>
                 </SignedOut>
                 <SignedIn>
@@ -114,12 +121,23 @@ export default function Navbar() {
         {/* Desktop Auth Buttons and Theme Toggle */}
         <div className="hidden md:flex items-center gap-3">
           <SignedOut>
-            <SignInButton mode="modal">
-              <Button variant="outline" size="sm">Sign In</Button>
-            </SignInButton>
-            <SignUpButton mode="modal">
-              <Button size="sm">Sign Up</Button>
-            </SignUpButton>
+            <div className="flex items-center gap-2 pr-3 border-r border-border/40">
+              <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Get started
+              </span>
+            </div>
+            <Button asChild variant="outline" size="sm">
+              <Link href="/sign-in">
+                <LogIn className="mr-1.5 h-4 w-4" />
+                Sign In
+              </Link>
+            </Button>
+            <Button asChild size="sm">
+              <Link href="/sign-up">
+                <UserPlus className="mr-1.5 h-4 w-4" />
+                Sign Up
+              </Link>
+            </Button>
           </SignedOut>
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
