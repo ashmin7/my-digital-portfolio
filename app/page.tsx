@@ -36,11 +36,13 @@ export default async function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">
-                  Securing Your Digital Future
+                  Growing as a Cyber Security Analyst
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Expert cybersecurity solutions to protect your organization from evolving threats. Penetration
-                  testing, security audits, and incident response services.
+                  I&apos;m in my second year of a Bachelor of Cyber Security, actively building my skills and confidence
+                  in understanding how threats work, how attacks take place, and the different ways you can protect
+                  systems against them. This digital portfolio documents my hands-on journey toward becoming a Cyber
+                  Security Analyst.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -112,11 +114,12 @@ export default async function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+              <div className="space-y-2">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Projects</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Cybersecurity Solutions</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Practice Projects & Learning Areas</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Protect you from cybersecurity attackers.
+                A snapshot of the areas I&apos;m exploring through university assignments, labs, and self-practice as I
+                grow into a cyber security specialist.
               </p>
             </div>
           </div>
@@ -182,13 +185,14 @@ export default async function Home() {
           <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_800px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Experience</div>
+                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Journey</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  15+ Years of Cybersecurity Expertise
+                  Early in My Cyber Security Journey
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  With extensive experience in the cybersecurity industry, I&apos;ve helped organizations of all sizes
-                  protect their digital assets and infrastructure.
+                  I&apos;m still in the early stages of my career, but I genuinely enjoy learning how threats function,
+                  how attacks happen, and how to protect systems against them. Each new lab, assignment, and project
+                  makes me more excited to work towards becoming a Cyber Security Analyst.
                 </p>
               </div>
               <ul className="grid gap-2 py-4">
@@ -196,25 +200,31 @@ export default async function Home() {
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Certified Information Systems Security Professional (CISSP)</span>
+                  <span>Second-year Bachelor of Cyber Security student, actively building core skills.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Certified Ethical Hacker (CEH)</span>
+                  <span>Hands-on labs using SIEM tools, firewalls, IDS/IPS, and security monitoring workflows.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Offensive Security Certified Professional (OSCP)</span>
+                  <span>Self-practice with basic scripting and network analysis to understand how attacks look in data.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Certified Cloud Security Professional (CCSP)</span>
+                  <span>Focused on learning how real-world threats operate and how to defend systems against them.</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-primary/10 p-1">
+                    <Shield className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Actively looking for an internship or entry-level role to learn from experienced professionals.</span>
                 </li>
               </ul>
               <div>
