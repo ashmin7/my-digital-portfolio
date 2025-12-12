@@ -127,51 +127,51 @@ export default async function Home() {
             <Card className="bg-background border-primary/20">
               <CardHeader>
                 <AlertTriangle className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Penetration Testing</CardTitle>
+                <CardTitle>Threats & Lab-Based Practice</CardTitle>
                 <CardDescription>
-                  Identify vulnerabilities before attackers do with our comprehensive penetration testing services.
+                  University and self-directed labs where I explore how attacks work and how to spot them in data.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Web Application Testing</li>
-                  <li>Network Infrastructure Testing</li>
-                  <li>Mobile Application Testing</li>
-                  <li>Social Engineering Assessments</li>
+                  <li>Understanding how common attacks are carried out</li>
+                  <li>Basic scripting for automation and log analysis</li>
+                  <li>Network traffic inspection and packet analysis</li>
+                  <li>Hands-on lab work based on real-world scenarios</li>
                 </ul>
               </CardContent>
             </Card>
             <Card className="bg-background border-primary/20">
               <CardHeader>
                 <Shield className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Security Audits</CardTitle>
+                <CardTitle>Security Tools & Monitoring</CardTitle>
                 <CardDescription>
-                  Comprehensive assessment of your security posture against industry standards and best practices.
+                  Early experience using security tools to understand alerts, events, and what they mean for defenders.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Compliance Assessments</li>
-                  <li>Security Architecture Review</li>
-                  <li>Cloud Security Assessment</li>
-                  <li>Risk Assessment</li>
+                  <li>Working with SIEM tools for log collection and alerting</li>
+                  <li>Configuring and testing firewalls and basic rules</li>
+                  <li>Experimenting with IDS/IPS in lab environments</li>
+                  <li>Connecting theory from class to practical tool use</li>
                 </ul>
               </CardContent>
             </Card>
             <Card className="bg-background border-primary/20">
               <CardHeader>
                 <FileCode className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Security Training</CardTitle>
+                <CardTitle>Portfolio & Continuous Learning</CardTitle>
                 <CardDescription>
-                  Empower your team with the knowledge to recognize and respond to security threats.
+                  Using this digital portfolio to turn what I learn into something concrete, visual, and shareable.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Security Awareness Training</li>
-                  <li>Phishing Simulations</li>
-                  <li>Developer Security Training</li>
-                  <li>Incident Response Drills</li>
+                  <li>Building a secure Next.js app with Neon & Drizzle</li>
+                  <li>Writing about AI, MCP, and security topics on my blog</li>
+                  <li>Tracking my growth as an aspiring Cyber Security Analyst</li>
+                  <li>Preparing for internships and entry-level roles</li>
                 </ul>
               </CardContent>
             </Card>
