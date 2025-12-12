@@ -63,7 +63,7 @@ const samplePosts = [
         same way I would secure a production system—but at a student level, where I am still learning and improving.
       </p>
     `,
-    coverImage: "/blog/ai-mcp-security.jpg",
+    coverImage: "/digital-shield.png",
     author: "Ashmin Aryal",
     readTime: "7 min read",
   },
@@ -108,7 +108,7 @@ const samplePosts = [
         kind of practical story you can share in internship interviews and also here on this portfolio.
       </p>
     `,
-    coverImage: "/blog/home-lab.jpg",
+    coverImage: "/digital-security-breach.png",
     author: "Ashmin Aryal",
     readTime: "6 min read",
   },
@@ -153,7 +153,7 @@ const samplePosts = [
         concepts—so this portfolio grows with my skills over time.
       </p>
     `,
-    coverImage: "/blog/portfolio-build.jpg",
+    coverImage: "/network-security-dashboard.png",
     author: "Ashmin Aryal",
     readTime: "5 min read",
   },
