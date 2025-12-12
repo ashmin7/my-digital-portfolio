@@ -5,6 +5,9 @@ import Image from "next/image";
 import { BlogPost } from "@/lib/types"; // Import BlogPost type from lib/types
 import { formatDate } from "@/lib/utils"; // Assuming formatDate is in utils
 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 export default async function BlogPage() {
   // Use the imported BlogPost type
   const posts: BlogPost[] = await db.select().from(blogPosts).orderBy(blogPosts.createdAt);
