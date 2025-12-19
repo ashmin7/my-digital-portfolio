@@ -1,14 +1,17 @@
-'use client';
+"use client";
 
 import { useAuth } from "@clerk/nextjs";
-import { logEvent } from "../../lib/logger";
+import { logEvent } from "@/lib/logger";
 
 export default function SecurityJournal() {
   const { isSignedIn, userId } = useAuth();
 
-  if (!isSignedIn) return <p>Access Denied</p>;
-
-  logEvent(`User ${userId} accessed security journal`);
+  // Log access (with or without a signed-in user)
+  logEvent(
+    isSignedIn
+      ? `User ${userId ?? "unknown"} accessed security journal`
+      : "Unauthenticated visitor accessed security journal",
+  );
 
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
@@ -18,7 +21,14 @@ export default function SecurityJournal() {
       <section style={{ marginTop: "2rem" }}>
         <h2>Mini Project 1: Environment Variables</h2>
         <p>
-          🔗 LMS Link: <a href="https://www.ausbizconsulting.com.au/courses/cybersec-bootcamp" target="_blank" rel="noreferrer">Cybersecurity Bootcamp</a>
+          🔗 LMS Link:{" "}
+          <a
+            href="https://www.ausbizconsulting.com.au/courses/cybersec-bootcamp"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Cybersecurity Bootcamp
+          </a>
         </p>
         <p>📘 Learned:</p>
         <ul>
@@ -34,7 +44,14 @@ export default function SecurityJournal() {
       <section>
         <h2>Mini Project 2: Authentication</h2>
         <p>
-          🔗 LMS Link: <a href="https://aiagents.ausbizconsulting.com.au/ai-protector-workshop" target="_blank" rel="noreferrer">AI Protector Workshop</a>
+          🔗 LMS Link:{" "}
+          <a
+            href="https://aiagents.ausbizconsulting.com.au/ai-protector-workshop"
+            target="_blank"
+            rel="noreferrer"
+          >
+            AI Protector Workshop
+          </a>
         </p>
         <p>📘 Learned:</p>
         <ul>
@@ -50,7 +67,14 @@ export default function SecurityJournal() {
       <section>
         <h2>Mini Project 3: Database Migration</h2>
         <p>
-          🔗 LMS Link: <a href="https://www.ausbizconsulting.com.au/courses/cybersec-bootcamp" target="_blank" rel="noreferrer">Cybersecurity Bootcamp</a>
+          🔗 LMS Link:{" "}
+          <a
+            href="https://www.ausbizconsulting.com.au/courses/cybersec-bootcamp"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Cybersecurity Bootcamp
+          </a>
         </p>
         <p>📘 Learned:</p>
         <ul>
