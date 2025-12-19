@@ -1,17 +1,33 @@
 "use client";
 
+import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
 import { logEvent } from "@/lib/logger";
 
 export default function SecurityJournal() {
   const { isSignedIn, userId } = useAuth();
 
-  // Log access (with or without a signed-in user)
-  logEvent(
-    isSignedIn
-      ? `User ${userId ?? "unknown"} accessed security journal`
-      : "Unauthenticated visitor accessed security journal",
-  );
+  // If not signed in, show an access message instead of the journal
+  if (!isSignedIn) {
+    logEvent("Unauthenticated visitor attempted to access security journal");
+    return (
+      <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+        <h1>🔐 Security Journal</h1>
+        <p style={{ marginTop: "1rem" }}>Access denied. Please sign in to view this page.</p>
+        <p style={{ marginTop: "0.5rem" }}>
+          <Link
+            href="/sign-in"
+            className="text-blue-500 underline hover:text-blue-600"
+          >
+            Go to Sign In
+          </Link>
+        </p>
+      </div>
+    );
+  }
+
+  // Signed-in access gets logged and sees the full journal
+  logEvent(`User ${userId ?? "unknown"} accessed security journal`);
 
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
