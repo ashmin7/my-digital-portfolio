@@ -2,6 +2,7 @@ import { db, subscribers, users } from "@/lib/db";
 import { User } from "@/lib/types";
 import { currentUser } from "@clerk/nextjs/server";
 import { eq, sql } from "drizzle-orm";
+import { sendWelcomeEmail, notifyOwnerOfNewSignup } from "@/app/actions/welcome-email";
 
 /**
  * Checks if the current user is an admin using the user's email from Clerk
@@ -144,6 +145,16 @@ export async function syncUserWithDatabase(email: string, name: string = ''): Pr
         name
       });
     }
+    
+    // Send welcome email to the new user (non-blocking)
+    sendWelcomeEmail(email, name).catch((err) => 
+      console.error("Failed to send welcome email:", err)
+    );
+    
+    // Notify the owner of the new signup (non-blocking)
+    notifyOwnerOfNewSignup(email, name).catch((err) => 
+      console.error("Failed to notify owner:", err)
+    );
     
     return newUserResults[0];
   } catch (error) {
