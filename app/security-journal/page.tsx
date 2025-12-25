@@ -3,13 +3,36 @@
 import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
 import { logEvent } from "@/lib/logger";
+import { useEffect, useState } from "react";
 
 export default function SecurityJournal() {
-  const { isSignedIn, userId } = useAuth();
+  const { isSignedIn, isLoaded, userId } = useAuth();
+  const [hasLogged, setHasLogged] = useState(false);
+
+  // Log access attempts only once after auth is loaded
+  useEffect(() => {
+    if (!isLoaded || hasLogged) return;
+    
+    if (isSignedIn) {
+      logEvent(`User ${userId ?? "unknown"} accessed security journal`, "info", { userId });
+    } else {
+      logEvent("Unauthenticated visitor attempted to access security journal", "warn");
+    }
+    setHasLogged(true);
+  }, [isLoaded, isSignedIn, userId, hasLogged]);
+
+  // Show loading while auth is being checked
+  if (!isLoaded) {
+    return (
+      <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+        <h1>🔐 Security Journal</h1>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   // If not signed in, show an access message instead of the journal
   if (!isSignedIn) {
-    logEvent("Unauthenticated visitor attempted to access security journal");
     return (
       <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
         <h1>🔐 Security Journal</h1>
@@ -26,9 +49,7 @@ export default function SecurityJournal() {
     );
   }
 
-  // Signed-in access gets logged and sees the full journal
-  logEvent(`User ${userId ?? "unknown"} accessed security journal`);
-
+  // Signed-in user sees the full journal
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <h1>🔐 Security Journal – Week 1–3</h1>
