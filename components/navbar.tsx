@@ -107,11 +107,8 @@ export default function Navbar() {
                   </div>
                 </SignedOut>
                 <SignedIn>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-center py-2">
                     <UserButton afterSignOutUrl="/" />
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href="/settings">Settings</Link>
-                    </Button>
                   </div>
                 </SignedIn>
               </div>
