@@ -23,7 +23,7 @@ export async function getInitialNewsletterState(): Promise<NewsletterState> {
 const resendApiKey = process.env.RESEND_API_KEY
 const resend = resendApiKey ? new Resend(resendApiKey) : null
 
-async function notifyOwnerOfNewSubscriber(email: string, name?: string | null) {
+async function notifyOwnerOfNewSubscriber(email: string, name?: string | null, notes?: string | null) {
   if (!resend) {
     console.warn("RESEND_API_KEY is not set; skipping notification email for new subscriber.")
     return
@@ -36,8 +36,8 @@ async function notifyOwnerOfNewSubscriber(email: string, name?: string | null) {
     await resend.emails.send({
       from: fromAddress,
       to: [toAddress],
-      subject: "New newsletter subscriber on your portfolio",
-      text: `You have a new newsletter subscriber on your portfolio.\n\nName: ${name || "(not provided)"}\nEmail: ${email}`,
+      subject: "🆕 New newsletter subscriber on your portfolio",
+      text: `You have a new newsletter subscriber on your portfolio.\n\nName: ${name || "(not provided)"}\nEmail: ${email}\n\nNotes: ${notes || "(none)"}`,
     })
   } catch (error) {
     console.error("Failed to send notification email for new subscriber:", error)
@@ -76,6 +76,7 @@ export async function subscribeToNewsletter(
   // Parse the form data
   const email = formData.get("email") as string
   const name = formData.get("name") as string
+  const notes = formData.get("notes") as string
 
   // Validate the input with Zod schema
   const validationResult = newsletterSubscriptionSchema.safeParse({ email, name });
@@ -99,14 +100,15 @@ export async function subscribeToNewsletter(
       }
     }
 
-    // Insert new subscriber
+    // Insert new subscriber with notes
     await db.insert(subscribers).values({
       email,
       name: name || null,
+      notes: notes || null,
     })
 
-    // Notify you (Ashmin) by email about the new subscriber
-    await notifyOwnerOfNewSubscriber(email, name || null)
+    // Notify you (Ashmin) by email about the new subscriber (including notes)
+    await notifyOwnerOfNewSubscriber(email, name || null, notes || null)
 
     // Send a thank-you email directly to the subscriber
     await sendWelcomeEmailToSubscriber(email, name || null)

@@ -39,6 +39,7 @@ export const subscribers = pgTable("subscribers", {
   id: serial("id").primaryKey(),
   email: text("email").notNull().unique(),
   name: text("name"),
+  notes: text("notes"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
