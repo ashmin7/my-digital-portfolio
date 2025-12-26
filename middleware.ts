@@ -14,7 +14,13 @@ const aj = arcjet({
   key: process.env.ARCJET_KEY!,
   rules: [
     shield({ mode: "LIVE" }),
-    detectBot({ mode: "LIVE" }),
+    detectBot({
+      mode: "LIVE",
+      // Allow common search engine bots globally
+      allow: [
+        "CATEGORY:SEARCH_ENGINE",
+      ],
+    }),
     tokenBucket({
       mode: "LIVE",
       refillRate: 100, // tokens added per interval
