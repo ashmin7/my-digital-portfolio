@@ -11,6 +11,12 @@ const isProtectedRoute = createRouteMatcher([
 ]);
 
 export default clerkMiddleware(async (auth, req) => {
+  // Skip Clerk middleware effects for Arcjet test endpoint
+  // This avoids dev-browser handshakes on API calls and lets Arcjet receive requests
+  if (req.nextUrl.pathname.startsWith('/api/arcjet')) {
+    return NextResponse.next();
+  }
+
   if (isProtectedRoute(req)) await auth.protect()
 })
 
