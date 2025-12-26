@@ -1,62 +1,34 @@
-import arcjet, { detectBot } from "@arcjet/next";
-import { isSpoofedBot } from "@arcjet/inspect";
+import arcjet, { tokenBucket } from "@arcjet/next";
 import { NextResponse } from "next/server";
+import { auth } from "@clerk/nextjs/server";
 
 const aj = arcjet({
   key: process.env.ARCJET_KEY!, // Get your site key from https://app.arcjet.com
   rules: [
-    // Bot protection: block bots except allowed categories
-    detectBot({
+    // Token bucket rate limit tracked by userId
+    tokenBucket({
       mode: "LIVE", // will block requests. Use "DRY_RUN" to log only
-      allow: [
-        "CATEGORY:SEARCH_ENGINE", // Google, Bing, etc
-        // Uncomment to allow these other common bot categories
-        // See the full list at https://arcjet.com/bot-list
-        //"CATEGORY:MONITOR", // Uptime monitoring services
-        //"CATEGORY:PREVIEW", // Link previews e.g. Slack, Discord
-      ],
+      characteristics: ["userId"], // track requests by a custom user ID
+      refillRate: 5, // refill 5 tokens per interval
+      interval: 10, // refill every 10 seconds
+      capacity: 10, // bucket maximum capacity of 10 tokens
     }),
   ],
 });
 
 export async function GET(req: Request) {
-  const decision = await aj.protect(req);
+  const { userId } = await auth();
+  const effectiveUserId = userId ?? "anonymous"; // Replace with your authenticated user ID when available
+  const decision = await aj.protect(req, { userId: effectiveUserId, requested: 5 }); // Deduct 5 tokens from the bucket
 
   if (decision.isDenied()) {
-    if (decision.reason.isBot()) {
-      return NextResponse.json(
-        { error: "No bots allowed", reason: decision.reason },
-        { status: 403 },
-      );
-    } else {
-      return NextResponse.json(
-        { error: "Forbidden", reason: decision.reason },
-        { status: 403 },
-      );
-    }
-  }
-
-  // Requests from hosting IPs are likely from bots, so they can usually be
-  // blocked. However, consider your use case - if this is an API endpoint
-  // then hosting IPs might be legitimate.
-  // https://docs.arcjet.com/blueprints/vpn-proxy-detection
-  if (decision.ip.isHosting()) {
     return NextResponse.json(
-      { error: "Forbidden", reason: decision.reason },
-      { status: 403 },
+      { error: "Too Many Requests", reason: decision.reason },
+      { status: 429 },
     );
   }
 
-  // Paid Arcjet accounts include additional verification checks using IP data.
-  // Verification isn't always possible, so we recommend checking the decision
-  // separately.
-  // https://docs.arcjet.com/bot-protection/reference#bot-verification
-  if (decision.results.some(isSpoofedBot)) {
-    return NextResponse.json(
-      { error: "Forbidden", reason: decision.reason },
-      { status: 403 },
-    );
-  }
+  // If allowed, return a success payload
 
   return NextResponse.json({ message: "Hello world" });
 }
