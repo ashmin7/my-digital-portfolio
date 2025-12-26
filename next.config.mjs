@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Explicitly set Turbopack root to this project to avoid workspace root mis-detection
+  turbopack: {
+    root: '.',
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
