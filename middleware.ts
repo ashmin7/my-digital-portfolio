@@ -1,6 +1,6 @@
-import { clerkMiddleware, createRouteMatcher, getAuth } from "@clerk/nextjs/server";
-import { isAdmin } from "@/lib/auth";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
+import arcjet, { rateLimit, detectBot, shield } from "@arcjet/next";
 
 // Define protected routes that require authentication
 const isProtectedRoute = createRouteMatcher([
@@ -9,14 +9,32 @@ const isProtectedRoute = createRouteMatcher([
   '/security-journal',
 ]);
 
+// Initialize Arcjet with required rules (global protection)
+const aj = arcjet({
+  key: process.env.ARCJET_KEY!,
+  rules: [
+    rateLimit({ mode: "LIVE", limit: 100, interval: "1m" }),
+    detectBot(),
+    shield(),
+  ],
+});
+
 export default clerkMiddleware(async (auth, req) => {
-  // Skip Clerk middleware effects for Arcjet test endpoint
-  // This avoids dev-browser handshakes on API calls and lets Arcjet receive requests
-  if (req.nextUrl.pathname.startsWith('/api/arcjet')) {
+  // Arcjet protection runs for all matched requests
+  const decision = await aj.protect(req);
+  if (decision.isDenied()) {
+    return NextResponse.json({ error: "Blocked by Arcjet" }, { status: 403 });
+  }
+
+  const pathname = req.nextUrl.pathname;
+
+  // Do NOT apply Clerk to any API routes; allow API traffic unmodified
+  if (pathname.startsWith('/api/')) {
     return NextResponse.next();
   }
 
-  if (isProtectedRoute(req)) await auth.protect()
+  // Apply Clerk auth to protected page routes only
+  if (isProtectedRoute(req)) await auth.protect();
 })
 
 
@@ -26,7 +44,7 @@ export const config = {
   matcher: [
     // Skip Next.js internals and all static files, unless found in search params
     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    // Note: We intentionally do NOT include API routes here to avoid Clerk running on /api/*
-    // This ensures endpoints like /api/arcjet are never intercepted by Clerk in production
+    // Include API routes so Arcjet runs globally (Clerk is skipped in code for APIs)
+    '/(api|trpc)(.*)',
   ],
 };
