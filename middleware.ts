@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-import arcjet, { rateLimit, detectBot, shield } from "@arcjet/next";
+import arcjet, { detectBot, shield, tokenBucket } from "@arcjet/next";
 
 // Define protected routes that require authentication
 const isProtectedRoute = createRouteMatcher([
@@ -13,15 +13,20 @@ const isProtectedRoute = createRouteMatcher([
 const aj = arcjet({
   key: process.env.ARCJET_KEY!,
   rules: [
-    rateLimit({ mode: "LIVE", limit: 100, interval: "1m" }),
-    detectBot(),
-    shield(),
+    shield({ mode: "LIVE" }),
+    detectBot({ mode: "LIVE" }),
+    tokenBucket({
+      mode: "LIVE",
+      refillRate: 100, // tokens added per interval
+      interval: 60,    // seconds per interval (1 minute)
+      capacity: 100,   // max tokens (burst capacity)
+    }),
   ],
 });
 
 export default clerkMiddleware(async (auth, req) => {
   // Arcjet protection runs for all matched requests
-  const decision = await aj.protect(req);
+  const decision = await aj.protect(req, { requested: 1 });
   if (decision.isDenied()) {
     return NextResponse.json({ error: "Blocked by Arcjet" }, { status: 403 });
   }
