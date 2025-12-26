@@ -6,7 +6,6 @@ import { NextResponse } from "next/server";
 const isProtectedRoute = createRouteMatcher([
   '/admin',
   '/resources(.*)',
-  '/projects',
   '/security-journal',
 ]);
 
