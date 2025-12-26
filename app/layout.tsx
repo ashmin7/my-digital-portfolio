@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
 import { AuthSync } from "@/components/auth-sync";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // import {
 //   SignInButton,
 //   SignUpButton,
@@ -40,6 +41,8 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <Toaster />
+            {/* Vercel Speed Insights */}
+            <SpeedInsights />
           </div>
         </ThemeProvider>
       </body>
