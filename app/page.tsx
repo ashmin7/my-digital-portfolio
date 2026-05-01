@@ -46,8 +46,12 @@ export default async function Home() {
                   Ashmin Aryal
                 </h1>
                 <p className="max-w-xl text-balance text-muted-foreground md:text-lg">
-                  Cybersecurity student at Victoria University with practical experience in cloud hardening,
-                  identity and access management, threat monitoring, and security lab work.
+                  Cybersecurity student at Victoria University with foundational knowledge in information security,
+                  network security, and system security principles. Currently seeking entry-level IT support or
+                  cybersecurity internship opportunities.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  📍 Ashfield NSW, Australia | 📧 ashminaryal111@gmail.com | 📱 0424 885 009
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
@@ -90,37 +94,37 @@ export default async function Home() {
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
                       <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
                         <Lock className="h-3.5 w-3.5" />
-                        Cloud & Identity
+                        Security Tools
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        IAM, MFA, mTLS, API protection, and cloud hardening.
+                        SIEM, firewalls, IDS/IPS, vulnerability scanning, network monitoring.
                       </p>
                     </div>
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
                       <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
                         <Database className="h-3.5 w-3.5" />
-                        Monitoring
+                        Identity & Access
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        CloudWatch alerts, dashboards, and threat visibility.
+                        MFA, API security, access control, IAM, mTLS.
                       </p>
                     </div>
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
                       <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
                         <AlertTriangle className="h-3.5 w-3.5" />
-                        Threats
+                        Systems & Networking
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        Threat detection, vulnerability testing, and response fundamentals.
+                        Windows Server, Active Directory, Linux, TCP/IP, DNS, LAN/WAN, virtualization.
                       </p>
                     </div>
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
                       <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
                         <FileCode className="h-3.5 w-3.5" />
-                        Portfolio
+                        CloudWatch & Monitoring
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        Showcasing projects, labs, certifications, and internship experience.
+                        Real-time monitoring, alerts, dashboards, threat visibility, incident response.
                       </p>
                     </div>
                   </div>

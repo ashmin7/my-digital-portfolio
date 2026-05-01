@@ -31,25 +31,28 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ashmin Aryal</h2>
                 <p className="text-xl text-muted-foreground">
-                  <span className="text-primary font-semibold">Cybersecurity Student & Aspiring SOC / IT Support Associate</span>
+                  <span className="text-primary font-semibold">Cybersecurity Student at Victoria University</span>
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  📍 Ashfield NSW, Australia | 📧 ashminaryal111@gmail.com | 📱 0424 885 009
                 </p>
               </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground">
-                  I am currently in the second year of my Bachelor of Cyber Security program at Victoria University.
-                  My focus is on building a strong foundation in information security, network security, and system
-                  security principles while understanding how real attacks work and how defenders respond.
+                  I am currently in Year 2 of my Bachelor of Cyber Security program at Victoria University (August 2024 – June 2027).
+                  My focus is on advanced networking protocols, security architecture, threat analysis, system administration,
+                  and defensive security strategies.
                 </p>
                 <p className="text-muted-foreground">
-                  Through university labs and industry experience, I&apos;ve worked with SIEM concepts, firewalls,
-                  IDS/IPS, identity and access controls, cloud monitoring, and scripting/network analysis. These
-                  exercises help me connect theory with how security events appear in logs, traffic, and real systems.
+                  I completed a cybersecurity analyst internship with AusBiz Consulting (via Employability Advantage) where I
+                  gained hands-on experience in cloud hardening across AWS and Azure, identity and access management, API
+                  security, real-time threat monitoring with CloudWatch, and vulnerability testing using GenAI tools.
                 </p>
                 <p className="text-muted-foreground">
-                  This digital portfolio brings together my studies, cybersecurity analyst internship, Digital Twin III
-                  project, and university security labs. I&apos;m actively looking for entry-level IT support or
-                  cybersecurity internship opportunities where I can contribute and keep learning from experienced
-                  professionals.
+                  My foundation includes TCP/IP networking, Windows Server and Active Directory basics, Linux system administration,
+                  firewall configuration, IDS/IPS awareness, vulnerability scanning, and security best practices. I'm actively
+                  seeking entry-level IT support or cybersecurity internship roles where I can apply technical skills and develop
+                  hands-on experience in professional environments.
                 </p>
               </div>
             </div>
@@ -84,19 +87,19 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="bg-background border-primary/20">
               <CardHeader className="pb-2">
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
-                  <Award className="h-6 w-6 text-primary" />
+                  <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>Statement of Completion - Cybersecurity Analyst</CardTitle>
-                <CardDescription>Employability Advantage (2025)</CardDescription>
+                <CardTitle>Bachelor of Cyber Security</CardTitle>
+                <CardDescription>Victoria University, Sydney</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Completed a 10-week industry engagement led internship covering cloud hardening, identity security,
-                  API protection, monitoring, and threat intelligence.
+                  Currently Enrolled (Year 2) | August 2024 – June 2027 (Expected)<br/><br/>
+                  Focus: Advanced networking protocols, security architecture, threat analysis, system administration, and defensive security strategies.
                 </p>
               </CardContent>
             </Card>
@@ -106,13 +109,27 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>Cyber Security Foundations</CardTitle>
-                <CardDescription>Networking, monitoring, and defense basics</CardDescription>
+                <CardTitle>Statement of Completion</CardTitle>
+                <CardDescription>Cybersecurity Analyst (2025)</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  University study and labs covering core security concepts, threat detection, networking, and
-                  defensive operations fundamentals.
+                  Employability Advantage 10-week intensive program. Covered cloud hardening, identity security, API protection, real-time monitoring, and threat intelligence.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader className="pb-2">
+                <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
+                  <Briefcase className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Cybersecurity Analyst Internship</CardTitle>
+                <CardDescription>AusBiz Consulting (2025)</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  10-week engagement with cloud hardening, IAM configuration, API security, CloudWatch monitoring, and vulnerability assessment using GenAI tools.
                 </p>
               </CardContent>
             </Card>
@@ -123,12 +140,26 @@ export default function AboutPage() {
                   <Award className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Digital Twin III Project</CardTitle>
-                <CardDescription>Live cybersecurity hacking lab</CardDescription>
+                <CardDescription>Live Cybersecurity Hacking Lab</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Built a secure cyber-hardened digital twin portfolio with logging, authentication, access control,
-                  and simulated attack and defense scenarios.
+                  Cyber-hardened digital twin with identity management, authentication, access control, API security, and simulated attack/defense scenarios.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader className="pb-2">
+                <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
+                  <Award className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>University Security Labs</CardTitle>
+                <CardDescription>Hands-on defensive exercises</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Firewall configuration, IDS/IPS testing, network segmentation, vulnerability assessment, and malware analysis in controlled environments.
                 </p>
               </CardContent>
             </Card>
@@ -138,12 +169,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>University Security Labs</CardTitle>
-                <CardDescription>Firewalls, IDS/IPS, segmentation, and testing</CardDescription>
+                <CardTitle>Higher Secondary Education</CardTitle>
+                <CardDescription>Computer Science, Nepal (2023)</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Lab exercises focused on firewall rules, IDS/IPS, vulnerability assessment, and malware analysis.
+                  Completed at British Grammar School, Nepal. Foundation in Mathematics, Physics, and Computer Science fundamentals.
                 </p>
               </CardContent>
             </Card>

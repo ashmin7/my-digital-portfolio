@@ -55,27 +55,26 @@ export default function ContactPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Profile snapshot</CardTitle>
+            <CardTitle>Profile & Interests</CardTitle>
             <CardDescription>
-              Ashfield NSW, Australia • Victoria University student • Cybersecurity analyst intern
+              Ashfield NSW, Australia • Victoria University (Year 2) • Cybersecurity Analyst Intern
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex flex-wrap gap-2">
-              {["Cybersecurity", "IT Support", "SOC", "Cloud Security", "Identity Security"].map((item) => (
+              {["Security Tools", "Identity & Access", "Cloud Security", "Monitoring", "IT Support", "SOC Fundamentals"].map((item) => (
                 <Badge key={item} variant="secondary">{item}</Badge>
               ))}
             </div>
             <div className="space-y-3 text-sm text-muted-foreground">
               <p className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" />Ashfield NSW, Australia</p>
-              <p>LinkedIn: www.linkedin.com/in/ashmin-aryal-b42bab2a9</p>
-              <p>Portfolio: ashminaryal.info</p>
-              <p>Project: digital-twin-digitalmind222.vercel.app</p>
+              <p><strong>Languages:</strong> English (Fluent), Nepali (Native), Hindi (Fluent)</p>
+              <p><strong>Interests:</strong> Cybersecurity labs (TryHackMe, home labs), CTF challenges, Linux virtualisation, staying updated on threats</p>
             </div>
             <div className="rounded-lg bg-muted/40 p-4 text-sm text-muted-foreground">
               <p>
-                I&apos;m especially interested in entry-level roles where I can support users, monitor security events,
-                help improve access controls, and continue learning from experienced professionals.
+                I'm seeking entry-level IT support or cybersecurity internship roles. I'm especially interested in positions where I can
+                support users, monitor security events, improve access controls, and continue learning from experienced professionals.
               </p>
             </div>
           </CardContent>
