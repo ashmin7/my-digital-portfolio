@@ -50,14 +50,14 @@ async function sendWelcomeEmailToSubscriber(email: string, name?: string | null)
     return
   }
 
-  const fromAddress = process.env.EMAIL_FROM || "Ashmin Cyber Lab <onboarding@resend.dev>"
+  const fromAddress = process.env.EMAIL_FROM || "Ashmin Aryal | Cybersecurity Research Portfolio <onboarding@resend.dev>"
 
   try {
     await resend.emails.send({
       from: fromAddress,
       to: [email],
-      subject: "Thanks for subscribing to Ashmin Cyber Lab",
-      text: `Hi ${name || "there"},\n\nThank you for subscribing to Ashmin Cyber Lab. I really appreciate your interest in my cyber security journey.\n\nI use this newsletter to share what I'm learning about security, labs I'm working on, and new posts I add to the site.\n\n– Ashmin`,
+      subject: "Thanks for subscribing to Ashmin Aryal | Cybersecurity Research Portfolio",
+      text: `Hi ${name || "there"},\n\nThank you for subscribing to Ashmin Aryal | Cybersecurity Research Portfolio. I really appreciate your interest in my cyber security journey.\n\nI use this newsletter to share what I'm learning about security, labs I'm working on, and new posts I add to the site.\n\n– Ashmin`,
     })
   } catch (error) {
     console.error("Failed to send welcome email to subscriber:", error)

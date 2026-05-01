@@ -1,4 +1,4 @@
-# CyberShield: Cybersecurity Portfolio Application
+# Ashmin Aryal | Cybersecurity Research Portfolio
 
 ## Purpose of the app 
 
@@ -10,7 +10,7 @@ A web-based digital solution that allows cybersecurity professionals to showcase
 
 ## Application Overview
 
-CyberShield is a comprehensive cybersecurity portfolio application built with Next.js, featuring:
+Ashmin Aryal | Cybersecurity Research Portfolio is a comprehensive cybersecurity portfolio application built with Next.js, featuring:
 
 - **Modern UI Components**: Built with a comprehensive UI component library (shadcn/ui)
 - **Authentication**: Secure user authentication via Clerk with social login options

@@ -10,10 +10,10 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">About Me</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">About Ashmin Aryal</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
-                Second-year Bachelor of Cyber Security student, early in my journey and focused on understanding how
-                threats work, how attacks happen, and how to protect systems against them.
+                Cybersecurity student at Victoria University with practical experience in cloud hardening, identity
+                security, monitoring, and security lab work.
               </p>
             </div>
           </div>
@@ -31,26 +31,25 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ashmin Aryal</h2>
                 <p className="text-xl text-muted-foreground">
-                  <span className="text-primary font-semibold">Cyber Security Student & Aspiring Analyst</span>
+                  <span className="text-primary font-semibold">Cybersecurity Student & Aspiring SOC / IT Support Associate</span>
                 </p>
               </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground">
-                  I am currently in the second year of my Bachelor of Cyber Security program and still very early in my
-                  journey. I really enjoy learning how threats function, how attacks take place, and the different ways
-                  you can protect systems against them. Each new lab, assignment, and project makes me more motivated to
-                  move toward a career as a Cyber Security Analyst.
+                  I am currently in the second year of my Bachelor of Cyber Security program at Victoria University.
+                  My focus is on building a strong foundation in information security, network security, and system
+                  security principles while understanding how real attacks work and how defenders respond.
                 </p>
                 <p className="text-muted-foreground">
-                  Through university work and self-practice, I&apos;ve started getting hands-on with SIEM tools,
-                  firewalls, IDS/IPS, and basic scripting and network analysis. These exercises are helping me connect
-                  what I learn in class to how security events actually look in logs, traffic, and real environments.
+                  Through university labs and industry experience, I&apos;ve worked with SIEM concepts, firewalls,
+                  IDS/IPS, identity and access controls, cloud monitoring, and scripting/network analysis. These
+                  exercises help me connect theory with how security events appear in logs, traffic, and real systems.
                 </p>
                 <p className="text-muted-foreground">
-                  This digital portfolio is where I bring everything together: building a secure Next.js application
-                  with Neon and Drizzle ORM, experimenting with AI and MCP security concepts, and writing about what I
-                  learn. I&apos;m actively looking for internship or entry-level opportunities where I can keep learning
-                  from experienced professionals while gaining more practical experience.
+                  This digital portfolio brings together my studies, cybersecurity analyst internship, Digital Twin III
+                  project, and university security labs. I&apos;m actively looking for entry-level IT support or
+                  cybersecurity internship opportunities where I can contribute and keep learning from experienced
+                  professionals.
                 </p>
               </div>
             </div>
@@ -80,7 +79,7 @@ export default function AboutPage() {
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Credentials</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Learning Path & Certifications</h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                Current programs and learning tracks I am using to build my cyber security and AI security skills.
+                Current study, training, and completion details that support my cybersecurity career goals.
               </p>
             </div>
           </div>
@@ -91,13 +90,13 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>AI Protector Workshop</CardTitle>
-                <CardDescription>Security-first AI agents & MCP (in progress)</CardDescription>
+                <CardTitle>Statement of Completion - Cybersecurity Analyst</CardTitle>
+                <CardDescription>Employability Advantage (2025)</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  10-week journey focused on securing AI agents, MCP servers, and digital portfolios with layered
-                  defenses and professional reporting.
+                  Completed a 10-week industry engagement led internship covering cloud hardening, identity security,
+                  API protection, monitoring, and threat intelligence.
                 </p>
               </CardContent>
             </Card>
@@ -107,13 +106,13 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>Cyber Security Bootcamp Content</CardTitle>
-                <CardDescription>Security foundations, threats & incident readiness</CardDescription>
+                <CardTitle>Cyber Security Foundations</CardTitle>
+                <CardDescription>Networking, monitoring, and defense basics</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  LMS-backed curriculum covering core security concepts, threat detection, and security operations
-                  fundamentals.
+                  University study and labs covering core security concepts, threat detection, networking, and
+                  defensive operations fundamentals.
                 </p>
               </CardContent>
             </Card>
@@ -123,13 +122,13 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>Claude Desktop & MCP Agents</CardTitle>
-                <CardDescription>Hands-on AI agent development learning</CardDescription>
+                <CardTitle>Digital Twin III Project</CardTitle>
+                <CardDescription>Live cybersecurity hacking lab</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Workshop and resources on building and securing AI agents with Claude Desktop and the Model Context
-                  Protocol.
+                  Built a secure cyber-hardened digital twin portfolio with logging, authentication, access control,
+                  and simulated attack and defense scenarios.
                 </p>
               </CardContent>
             </Card>
@@ -139,13 +138,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>My Digital Portfolio Project</CardTitle>
-                <CardDescription>Secure Next.js, Neon & Drizzle stack</CardDescription>
+                <CardTitle>University Security Labs</CardTitle>
+                <CardDescription>Firewalls, IDS/IPS, segmentation, and testing</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Ongoing capstone-style project used to apply secure development, database design, and AI security
-                  patterns in practice.
+                  Lab exercises focused on firewall rules, IDS/IPS, vulnerability assessment, and malware analysis.
                 </p>
               </CardContent>
             </Card>
@@ -161,86 +159,86 @@ export default function AboutPage() {
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Expertise</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Skills & Specializations</h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                Practical skills I am building through this portfolio and security-focused AI training.
+                Practical skills I am building through my degree, internship, labs, and portfolio projects.
               </p>
             </div>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">Secure Web & Database Development</h3>
+              <h3 className="text-xl font-bold">Security Tools & Fundamentals</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Building Next.js applications with the App Router</span>
+                  <span>SIEM awareness and log monitoring</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Designing schemas and migrations with Drizzle ORM</span>
+                  <span>Firewalls, IDS/IPS, and vulnerability scanning concepts</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Working with Neon Postgres and secure connection strings</span>
+                  <span>Network traffic monitoring and analysis</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Implementing data-driven pages (blog, projects) with ISR</span>
+                  <span>Secure system configuration and best practices</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Managing environment variables and secrets safely</span>
+                  <span>Basic scripting for automation and analysis</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">AI Agent & MCP Security Foundations</h3>
+              <h3 className="text-xl font-bold">Identity & Access Security</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Understanding AI Protector mindset and layered defenses</span>
+                  <span>Multi-factor authentication (MFA)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Exploring MCP servers and secure integration patterns</span>
+                  <span>Access control principles and authentication workflows</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Writing about AI & MCP security in technical blog posts</span>
+                  <span>API security basics and mutual TLS awareness</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Thinking about authentication, authorization and rate limiting</span>
+                  <span>Identity-aware cloud services and secure sign-in flows</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Applying security updates (e.g. Next.js CVE patches) to real projects</span>
+                  <span>Understanding authorization and role-based access</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">Cyber Security Foundations</h3>
+              <h3 className="text-xl font-bold">Systems & Networking</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Understanding common web and application vulnerabilities</span>
+                  <span>Windows Server basics and Active Directory fundamentals</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Basic threat modeling and security risk awareness</span>
+                  <span>Linux/Ubuntu usage and basic virtualization</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Using logs and debugging to trace and fix security-related issues</span>
+                  <span>TCP/IP, DNS, and LAN/WAN concepts</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Following secure coding and deployment practices</span>
+                  <span>VM setup and system administration basics</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Building a portfolio that demonstrates a security-first mindset</span>
+                  <span>Threat awareness and defensive security mindset</span>
                 </li>
               </ul>
             </div>
@@ -256,7 +254,7 @@ export default function AboutPage() {
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Journey</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Experience So Far</h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                How I&apos;m currently building my cyber security skills through study, labs, and personal projects.
+                  How I&apos;m building my cyber security skills through study, industry experience, labs, and projects.
               </p>
             </div>
           </div>
@@ -268,7 +266,7 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Bachelor of Cyber Security (Year 1–2)</h3>
+                  <h3 className="font-bold text-lg">Bachelor of Cyber Security</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
                     Current
@@ -276,9 +274,8 @@ export default function AboutPage() {
                 </div>
                 <p className="text-muted-foreground mb-2">University Studies</p>
                 <p className="text-sm text-muted-foreground">
-                  Building core knowledge in networks, operating systems, security fundamentals, and how different
-                  types of attacks and defenses work, while completing labs and projects that mirror real-world
-                  scenarios.
+                  Building core knowledge in networking protocols, security architecture, threat analysis, system
+                  administration, and defensive security strategies.
                 </p>
               </div>
             </div>
@@ -289,7 +286,7 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Cyber Security Specialist Intern – Ausbiz Consulting</h3>
+                  <h3 className="font-bold text-lg">Cybersecurity Analyst Intern – AusBiz Consulting</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
                     2025
@@ -297,9 +294,8 @@ export default function AboutPage() {
                 </div>
                 <p className="text-muted-foreground mb-2">Industry Experience</p>
                 <p className="text-sm text-muted-foreground">
-                  Supporting security tasks at Ausbiz Consulting as a cyber security specialist intern—shadowing
-                  senior analysts, helping review alerts and logs, and applying what I learn at university to
-                  real client environments in a supervised way.
+                    Completed a 10-week intensive cybersecurity analyst internship with exposure to cloud hardening,
+                    identity security, API protection, monitoring, and threat intelligence analysis.
                 </p>
               </div>
             </div>
@@ -338,8 +334,8 @@ export default function AboutPage() {
                 </div>
                 <p className="text-muted-foreground mb-2">Portfolio & AI Security</p>
                 <p className="text-sm text-muted-foreground">
-                  Using this digital portfolio, AI Protector–inspired content, and security-focused blogging to
-                  practice secure web development, database design, and early AI/MCP security concepts.
+                  Using this digital portfolio, the Digital Twin III project, and security-focused learning to practice
+                  secure web development, identity protection, monitoring, and applied cybersecurity concepts.
                 </p>
               </div>
             </div>

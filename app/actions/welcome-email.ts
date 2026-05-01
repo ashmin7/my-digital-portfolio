@@ -14,13 +14,13 @@ export async function sendWelcomeEmail(email: string, name?: string | null) {
     return { success: false, error: "Email service not configured" };
   }
 
-  const fromAddress = process.env.EMAIL_FROM || "Ashmin Cyber Lab <onboarding@resend.dev>";
+  const fromAddress = process.env.EMAIL_FROM || "Ashmin Aryal | Cybersecurity Research Portfolio <onboarding@resend.dev>";
 
   try {
     await resend.emails.send({
       from: fromAddress,
       to: [email],
-      subject: "🎉 Welcome to Ashmin Cyber Lab!",
+      subject: "🎉 Welcome to Ashmin Aryal | Cybersecurity Research Portfolio!",
       html: `
 <!DOCTYPE html>
 <html>
@@ -30,12 +30,12 @@ export async function sendWelcomeEmail(email: string, name?: string | null) {
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 30px;">
-    <h1 style="color: #0ea5e9; margin: 0;">🔐 Ashmin Cyber Lab</h1>
+    <h1 style="color: #0ea5e9; margin: 0;">🔐 Ashmin Aryal | Cybersecurity Research Portfolio</h1>
   </div>
   
   <h2 style="color: #1e293b;">Hi ${name || "there"}! 👋</h2>
   
-  <p>Thank you for signing up to <strong>Ashmin Cyber Lab</strong>! I'm thrilled to have you here.</p>
+  <p>Thank you for signing up to <strong>Ashmin Aryal | Cybersecurity Research Portfolio</strong>! I'm thrilled to have you here.</p>
   
   <p>Here's what you can explore:</p>
   
@@ -66,7 +66,7 @@ export async function sendWelcomeEmail(email: string, name?: string | null) {
       `,
       text: `Hi ${name || "there"}!
 
-Thank you for signing up to Ashmin Cyber Lab! I'm thrilled to have you here.
+Thank you for signing up to Ashmin Aryal | Cybersecurity Research Portfolio! I'm thrilled to have you here.
 
 Here's what you can explore:
 - Security Journal – My hands-on learning notes and lab experiences
@@ -102,13 +102,13 @@ export async function notifyOwnerOfNewSignup(email: string, name?: string | null
   }
 
   const toAddress = process.env.EMAIL_TO || "ashminaryal111@gmail.com";
-  const fromAddress = process.env.EMAIL_FROM || "Ashmin Cyber Lab <onboarding@resend.dev>";
+  const fromAddress = process.env.EMAIL_FROM || "Ashmin Aryal | Cybersecurity Research Portfolio <onboarding@resend.dev>";
 
   try {
     await resend.emails.send({
       from: fromAddress,
       to: [toAddress],
-      subject: "🆕 New user signed up on Ashmin Cyber Lab",
+      subject: "🆕 New user signed up on Ashmin Aryal | Cybersecurity Research Portfolio",
       text: `A new user has signed up on your portfolio!\n\nName: ${name || "(not provided)"}\nEmail: ${email}\n\nTime: ${new Date().toISOString()}`,
     });
   } catch (error) {

@@ -19,8 +19,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ashmin Cyber Lab | Cybersecurity Portfolio",
-  description: "A growing cyber security portfolio by Ashmin Aryal, focused on hands-on learning and modern security practices.",
+  title: "Ashmin Aryal | Cybersecurity Research Portfolio",
+  description: "Ashmin Aryal's cybersecurity research portfolio showcasing internship experience, cloud hardening, security labs, projects, education, and certifications.",
   generator: "v0.dev",
 }
 

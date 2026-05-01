@@ -39,38 +39,37 @@ export default async function Home() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary shadow-sm">
                 <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
-                Cyber Security Student Portfolio
+                Cybersecurity Research Portfolio
               </div>
               <div className="space-y-3">
                 <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-sky-400 to-indigo-400">
-                  Ashmin Cyber Lab
+                  Ashmin Aryal
                 </h1>
                 <p className="max-w-xl text-balance text-muted-foreground md:text-lg">
-                  I&apos;m a second-year Bachelor of Cyber Security student, learning how real attacks work and how to
-                  defend modern systems. This site is where I turn my labs, notes, and experiments into a living
-                  security portfolio.
+                  Cybersecurity student at Victoria University with practical experience in cloud hardening,
+                  identity and access management, threat monitoring, and security lab work.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <Link href="/projects">
                   <Button size="lg" className="shadow-lg shadow-primary/30">
-                    View Practice Projects
+                    View Projects
                   </Button>
                 </Link>
                 <Link href="/blog">
                   <Button size="lg" variant="outline" className="border-primary/40 text-primary">
-                    Read My Articles
+                    View Profile
                   </Button>
                 </Link>
               </div>
               <div className="flex flex-wrap gap-4 pt-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Shield className="h-4 w-4 text-primary" />
-                  <span>Focus: blue-team skills & security fundamentals</span>
+                  <span>Focus: cybersecurity operations, IT support, and SOC fundamentals</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Server className="h-4 w-4 text-primary" />
-                  <span>Stack: Next.js, Neon, Drizzle, Clerk</span>
+                  <span>Stack: Next.js, TypeScript, Vercel, Supabase</span>
                 </div>
               </div>
             </div>
@@ -84,26 +83,26 @@ export default async function Home() {
                       Snapshot
                     </span>
                     <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400">
-                      Learning in progress
+                      Available for internships
                     </span>
                   </div>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
                       <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
                         <Lock className="h-3.5 w-3.5" />
-                        Lab Practice
+                        Cloud & Identity
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        SIEM, firewalls, IDS/IPS and log analysis exercises.
+                        IAM, MFA, mTLS, API protection, and cloud hardening.
                       </p>
                     </div>
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
                       <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
                         <Database className="h-3.5 w-3.5" />
-                        Secure Stack
+                        Monitoring
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        Next.js + Neon + Drizzle with secure defaults.
+                        CloudWatch alerts, dashboards, and threat visibility.
                       </p>
                     </div>
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
@@ -112,7 +111,7 @@ export default async function Home() {
                         Threats
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        Learning how common attacks appear in traffic & logs.
+                        Threat detection, vulnerability testing, and response fundamentals.
                       </p>
                     </div>
                     <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
@@ -121,7 +120,7 @@ export default async function Home() {
                         Portfolio
                       </div>
                       <p className="mt-1 text-[11px] text-muted-foreground">
-                        Turning coursework into real projects and write‑ups.
+                        Showcasing projects, labs, certifications, and internship experience.
                       </p>
                     </div>
                   </div>
@@ -150,11 +149,11 @@ export default async function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Projects</div>
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Skills</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Practice Projects & Learning Areas</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                A snapshot of the areas I&apos;m exploring through university assignments, labs, and self-practice as I
-                grow into a cyber security specialist.
+                A snapshot of the areas I&apos;m building through university assignments, labs, internship work, and
+                self-practice as I grow toward an entry-level cybersecurity role.
               </p>
             </div>
           </div>
@@ -162,15 +161,15 @@ export default async function Home() {
             <Card className="bg-background border-primary/20">
               <CardHeader>
                 <AlertTriangle className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Threats & Lab-Based Practice</CardTitle>
+                <CardTitle>Security Tools & Fundamentals</CardTitle>
                 <CardDescription>
-                  University and self-directed labs where I explore how attacks work and how to spot them in data.
+                  SIEM, firewalls, IDS/IPS, vulnerability assessment, and network traffic monitoring.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>Understanding how common attacks are carried out</li>
-                  <li>Basic scripting for automation and log analysis</li>
+                  <li>Basic scripting for automation, analysis, and reporting</li>
                   <li>Network traffic inspection and packet analysis</li>
                   <li>Hands-on lab work based on real-world scenarios</li>
                 </ul>
@@ -179,15 +178,15 @@ export default async function Home() {
             <Card className="bg-background border-primary/20">
               <CardHeader>
                 <Shield className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Security Tools & Monitoring</CardTitle>
+                <CardTitle>Identity & Access Security</CardTitle>
                 <CardDescription>
-                  Early experience using security tools to understand alerts, events, and what they mean for defenders.
+                  MFA, IAM, access control, API security basics, and authentication workflows.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>Working with SIEM tools for log collection and alerting</li>
-                  <li>Configuring and testing firewalls and basic rules</li>
+                  <li>Configuring and testing firewalls and access rules</li>
                   <li>Experimenting with IDS/IPS in lab environments</li>
                   <li>Connecting theory from class to practical tool use</li>
                 </ul>
@@ -196,16 +195,16 @@ export default async function Home() {
             <Card className="bg-background border-primary/20">
               <CardHeader>
                 <FileCode className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Portfolio & Continuous Learning</CardTitle>
+                <CardTitle>Projects & Continuous Learning</CardTitle>
                 <CardDescription>
-                  Using this digital portfolio to turn what I learn into something concrete, visual, and shareable.
+                  Using this digital portfolio to turn what I learn into a clear, professional, and shareable record of progress.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Building a secure Next.js app with Neon & Drizzle</li>
-                  <li>Writing about AI, MCP, and security topics on my blog</li>
-                  <li>Tracking my growth as an aspiring Cyber Security Analyst</li>
+                  <li>Building a secure Next.js app with practical security sections</li>
+                  <li>Documenting the Digital Twin III project and lab exercises</li>
+                  <li>Tracking my growth as an aspiring cybersecurity analyst</li>
                   <li>Preparing for internships and entry-level roles</li>
                 </ul>
               </CardContent>
@@ -225,9 +224,9 @@ export default async function Home() {
                   Early in My Cyber Security Journey
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  I&apos;m still in the early stages of my career, but I genuinely enjoy learning how threats function,
-                  how attacks happen, and how to protect systems against them. Each new lab, assignment, and project
-                  makes me more excited to work towards becoming a Cyber Security Analyst.
+                  I&apos;m in the early stages of my career, but I&apos;m strongly motivated by threat analysis, defensive
+                  security, and the practical work of protecting systems. Each new lab, assignment, and project
+                  strengthens my goal of becoming a cybersecurity analyst.
                 </p>
               </div>
               <ul className="grid gap-2 py-4">
@@ -235,7 +234,7 @@ export default async function Home() {
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Second-year Bachelor of Cyber Security student, actively building core skills.</span>
+                  <span>Second-year Bachelor of Cyber Security student building core defensive security skills.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="rounded-full bg-primary/10 p-1">
@@ -247,19 +246,19 @@ export default async function Home() {
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Self-practice with basic scripting and network analysis to understand how attacks look in data.</span>
+                  <span>Self-practice with scripting and network analysis to identify attacks in logs and traffic.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Focused on learning how real-world threats operate and how to defend systems against them.</span>
+                  <span>Focused on threat detection, incident response, and defensive security fundamentals.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="rounded-full bg-primary/10 p-1">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Actively looking for an internship or entry-level role to learn from experienced professionals.</span>
+                  <span>Actively seeking an internship or entry-level role to contribute and continue learning.</span>
                 </li>
               </ul>
               <div>
@@ -341,12 +340,12 @@ export default async function Home() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Newsletter</div>
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Connect</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-                Stay Updated on Cybersecurity Trends
+                Stay Updated on My Journey
               </h2>
               <p className="max-w-[600px] text-gray-400 md:text-xl/relaxed">
-                Subscribe to our newsletter for the latest cybersecurity news, tips, and insights.
+                Stay in touch for project updates, internship progress, and cybersecurity learning notes.
               </p>
             </div>
             <div className="w-full max-w-md">
@@ -367,7 +366,7 @@ export default async function Home() {
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Blog</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Insights</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Stay informed with our latest articles on cybersecurity trends, threats, and best practices.
+                A place for short write-ups on cybersecurity, project work, and practical lessons from labs and internships.
               </p>
             </div>
           </div>

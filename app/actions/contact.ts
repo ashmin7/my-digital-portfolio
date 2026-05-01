@@ -41,7 +41,7 @@ export async function submitContactForm(formData: FormData) {
   }
 
   const toAddress = process.env.EMAIL_TO || "ashminaryal111@gmail.com";
-  const fromAddress = process.env.EMAIL_FROM || "Ashmin Cyber Lab <onboarding@resend.dev>";
+  const fromAddress = process.env.EMAIL_FROM || "Ashmin Aryal | Cybersecurity Research Portfolio <onboarding@resend.dev>";
 
   try {
     await resend.emails.send({
@@ -81,7 +81,7 @@ export async function submitContactForm(formData: FormData) {
   <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; white-space: pre-wrap;">${message}</div>
   
   <p style="margin-top: 30px; color: #6b7280; font-size: 12px;">
-    Sent from Ashmin Cyber Lab contact form at ${new Date().toISOString()}
+    Sent from Ashmin Aryal | Cybersecurity Research Portfolio contact form at ${new Date().toISOString()}
   </p>
 </body>
 </html>

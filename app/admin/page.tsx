@@ -131,7 +131,7 @@ export default async function AdminPage() {
           <form className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="siteName">Site Name</Label>
-              <Input id="siteName" defaultValue="Ashmin Cyber Lab" />
+              <Input id="siteName" defaultValue="Ashmin Aryal | Cybersecurity Research Portfolio" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="adminEmail">Admin Email</Label>
